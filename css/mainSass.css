@@ -1,0 +1,136 @@
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Poltawski Nowy", serif;
+  background-color: #c0cdcd;
+}
+
+.intro {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  -webkit-transform: translate(-50%);
+  -os-transform: translate(-50%);
+  transform: translate(-50%);
+  left: 50%;
+  text-align: center;
+  background-color: #f0ffff;
+  margin-top: 1.5rem;
+  border-radius: 17px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.intro > h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.intro .my-name {
+  font-size: 25px;
+  color: #56a5f3;
+}
+
+.container {
+  background-color: rgba(243, 243, 243, 0.9803921569);
+  width: 80vw;
+  max-width: 37.5rem;
+  padding: 2.2rem 2.5rem;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.62rem;
+  -webkit-box-shadow: 0 1.25rem 1.8rem rgba(8, 21, 65, 0.25);
+          box-shadow: 0 1.25rem 1.8rem rgba(8, 21, 65, 0.25);
+}
+.container .search-area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 9fr 1.25rem 3fr;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.25rem;
+}
+.container .search-area input {
+  border: none;
+  border-bottom: 2px solid #c0cdcd;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: rgba(243, 243, 243, 0.9803921569);
+}
+.container .search-area button {
+  padding: 8px;
+  font-size: 16px;
+  background-color: #c0cdcd;
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+.container .search-area button:hover {
+  color: #fff;
+}
+.container .resultsArea {
+  margin-top: 1.25rem;
+}
+.container .resultsArea .countryFlag {
+  display: block;
+  width: 50%;
+  min-width: 8rem;
+  margin: 1.7rem auto 1.2rem auto;
+  border-radius: 10px;
+}
+.container .resultsArea .header {
+  text-align: center;
+  color: #1e8f62;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.container .resultsArea .header::after {
+  content: "";
+  position: absolute;
+  width: 17rem;
+  height: 4px;
+  background-color: #1e8f62;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.container .resultsArea .dataCollector p {
+  color: #058f8f;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.container .resultsArea .dataCollector p span {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+}
+.container .resultsArea > span {
+  color: #f44336;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container .resultsArea .dataCollector > h1 {
+  text-align: center;
+  color: #1e8f62;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 7px 0 0 0;
+}
+.container .resultsArea .dataCollector > h1 .done-by {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+}

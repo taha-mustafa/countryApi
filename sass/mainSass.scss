@@ -1,0 +1,129 @@
+@use '../sass/edit' as *;
+////////////////////////////////////////////////////////////////
+
+* {
+    @include addPrefixes(box-sizing, border-box, webkit o);
+    padding: 0;
+    margin: 0;
+    &:focus {
+        outline: none;
+    }
+}
+body {
+  font-family: 'Poltawski Nowy', serif;
+  background-color: $grey_color;
+}
+
+.intro {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  @include addPrefixes(transform, translate(-50%), webkit os);
+  left: 50%;
+  text-align: center;
+  background-color: $altTwo_white_color;
+  margin-top: 1.5rem;
+  border-radius: 17px;
+  line-height: 1.5;
+  font-weight: bold;
+  > h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .my-name {
+    font-size: 25px;
+    color: $alt_blue_color;
+  }
+}
+
+.container {
+  background-color: $altOne_white_color;
+  width: 80vw;
+  max-width: 37.5rem;
+  padding: 2.2rem 2.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: .62rem;
+  @include addPrefixes(box-shadow, 0 1.25rem 1.8rem $alt_black_color);
+  .search-area {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25rem;
+    input {
+      border: none;
+      border-bottom: 2px solid $grey_color;
+      padding: 10px;
+      font-size: 1.1rem;
+      background-color: $altOne_white_color;
+    }
+    button {
+    padding: 8px;
+    font-size: 16px;
+    background-color: $grey_color;
+    border: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    &:hover {
+      color: $white_color;
+    }
+  }
+  }
+  .resultsArea {
+    margin-top: 1.25rem;
+    .countryFlag {
+      display: block;
+      width: 50%;
+      min-width: 8rem;
+      margin: 1.7rem auto 1.2rem auto;
+      border-radius: 10px;
+    }
+    .header {
+      text-align: center;
+      color: $green_color;
+      margin-bottom: 1.5rem;
+      letter-spacing: .1rem;
+      font-size: 20px;
+      text-transform: uppercase;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 17rem;
+        height: 4px;
+        background-color: $green_color;
+        transform: translateX(-50%);
+      }
+    }
+    .dataCollector p {
+      color: #058f8f;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      span {
+        font-size: 22px;
+        color: $black_color;
+        font-weight: bold;
+      }
+    }
+    > span {
+      color: $red_color;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .dataCollector > h1 {
+      text-align: center;
+      color: $green_color;
+      letter-spacing: 1px;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 7px 0 0 0;
+      .done-by {
+        font-size: 22px;
+        color: $black_color;
+        font-weight: bold;
+      }
+    }
+  }
+}

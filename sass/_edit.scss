@@ -1,0 +1,82 @@
+/// A Centering Mixin
+@mixin centering {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/// Mixins For Media Queries
+@mixin maxMobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin minSmall {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin minMedium {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin minLarge {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+////////////////////////////////////////////////
+
+/// Mixin For Overlay
+@mixin overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+/////////////////////////////////
+
+/// Mixin For Adding Prefixes
+@mixin addPrefixes($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+////////////////////////////////////////
+
+/// Mixin For Animation
+@mixin forMakeAnim($anim-name) {
+    @-webkit-keyframes #{$anim-name} {
+        @content;
+    }
+    @-moz-keyframes #{$anim-name} {
+        @content;
+    }
+    @keyframes #{$anim-name} {
+        @content;
+    }
+}
+//////////////////////////////////////////////////////////////////
+/// Variables For Media Queries
+$max-mobileMedia: 767px;
+$min-smallMedia: 768px;
+$min-mediumMedia: 992px;
+$min-largeMedia: 1200px;
+//////////////////////////////////////
+
+/// Variables For very common used Colors in Your Website
+$white_color: #fff;
+$altOne_white_color: #f3f3f3fa;
+$altTwo_white_color: #f0ffff;
+$blue_color: #0075ff;
+$alt_blue_color: #56a5f3;
+$orange_color: #f59e0b;
+$green_color: #1e8f62;
+$red_color: #f44336;
+$grey_color: #c0cdcd;
+$black_color: #000;
+$alt_black_color: rgba(8, 21, 65, .25);
+/////////////////////////////////////////////
