@@ -17,7 +17,7 @@ body {
 .intro {
   position: absolute;
   width: 400px;
-  height: 200px;
+  height: 260px;
   padding: 20px;
   @include addPrefixes(transform, translate(-50%), webkit os);
   left: 50%;
@@ -27,6 +27,7 @@ body {
   border-radius: 17px;
   line-height: 1.5;
   font-weight: bold;
+  font-size: 19px;
   > h1 {
     font-weight: bold;
     font-size: 30px;
@@ -47,11 +48,17 @@ body {
   top: 50%;
   left: 50%;
   border-radius: .62rem;
+  @include maxMobile {
+    padding: 2rem;
+  }
   @include addPrefixes(box-shadow, 0 1.25rem 1.8rem $alt_black_color);
   .search-area {
     display: grid;
     grid-template-columns: 9fr 3fr;
     gap: 1.25rem;
+    @include maxMobile {
+      grid-template-columns: 12fr;
+    }
     input {
       border: none;
       border-bottom: 2px solid $grey_color;
@@ -94,6 +101,9 @@ body {
         height: 4px;
         background-color: $green_color;
         transform: translateX(-50%);
+        @include maxMobile {
+          width: 15rem;
+        }
       }
     }
     .dataCollector p {

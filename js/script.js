@@ -40,17 +40,17 @@ searchBtn.addEventListener("click", () => {
     if (nameForCountry.length === 0) {
       setTimeout(() => {
         resultsArea.innerHTML = `<span>It is best not to leave this field blank.</span>`;
-      }, 500);
+      }, 300);
       setTimeout(() => {
         resultsArea.innerHTML = '';
-      }, 2000);
+      }, 3500);
     } else {
       setTimeout(() => {
         resultsArea.innerHTML = `<span>Enter a Valid Country name.</span>`;
-      }, 500);
+      }, 300);
       setTimeout(() => {
         resultsArea.innerHTML = '';
-      }, 2000);
+      }, 3500);
     }
   });
   searchInput.value = '';
